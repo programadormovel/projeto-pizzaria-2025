@@ -1,0 +1,12 @@
+input {
+    text-align: center;
+    margin: 10px;
+    padding: 8px;
+}
+
+.Botao {
+    background-color: aquamarine;
+    color: blue;
+    font-size: large;
+    border-radius: 16%;
+}
