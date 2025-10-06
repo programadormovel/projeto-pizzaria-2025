@@ -4,6 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import './Login.css'
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 const schema = yup.object({
   nome: yup.string().required(),
@@ -12,7 +13,9 @@ const schema = yup.object({
 
 const Login = () => {
     const [usuario, setUsuario] = useState({name: '', password: ''})
-    const [id, setId] = useState("")
+    const [id, setId] = useState("0")
+
+    let navigation = useNavigate();
 
     useEffect(() => {
       if(usuario.name != null){
@@ -35,6 +38,7 @@ const Login = () => {
         } else {
           alert("Login realizado com sucesso \n" + response.data.id )
           setId(response.data.id)
+          navigation("/principal")
         }
             console.log(response.data)
         })
@@ -44,10 +48,6 @@ const Login = () => {
       }
         
     }, [usuario])
-
-    useState(() => {
-        window.location.href = "/principal"
-    }, [id])
 
     const { register, handleSubmit, formState:{ errors } } = useForm({
         resolver: yupResolver(schema)

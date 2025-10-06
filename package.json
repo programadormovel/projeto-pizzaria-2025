@@ -11,12 +11,14 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
+    "@react-navigation/native-stack": "^7.3.27",
     "axios": "^1.9.0",
     "bootstrap": "^5.3.6",
     "react": "^19.1.0",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.56.3",
+    "react-navigation": "^5.0.0",
     "react-router-dom": "^7.5.3",
     "yup": "^1.6.1"
   },
