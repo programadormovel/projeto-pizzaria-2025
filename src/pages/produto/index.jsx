@@ -6,7 +6,7 @@ const Produto = () => {
   const [produtos, setProdutos] = useState([])
 
   useEffect(()=>{
-    axios.get("http://https://springboot-kyn1.onrender.com:8080/products", 
+    axios.get("https://springboot-kyn1.onrender.com:8080/products", 
       {
         mode: 'no-cors',
         headers: {
