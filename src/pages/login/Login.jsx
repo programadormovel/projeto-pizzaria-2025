@@ -5,6 +5,7 @@ import * as yup from "yup";
 import './Login.css'
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
+import taylor from "../../assets/taylor.png"
 
 const schema = yup.object({
   nome: yup.string().required(),
@@ -61,6 +62,7 @@ const Login = () => {
       return (
         <div>
             <h3>Login</h3>
+            <img src={taylor} width="50" height="50" />
             <form onSubmit={handleSubmit(onSubmit)}>
             <input 
                 className="nome"
